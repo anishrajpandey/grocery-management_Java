@@ -1,12 +1,8 @@
 import java.util.Scanner;
 
 public class GroceryManager {
-    public GroceryManager() {
-
-    }
 
     public static void main(String[] args) {
-        // Task: Parallel Array Architecture
         String[] itemNames = new String[10];
         double[] itemPrices = new double[10];
         int[] itemStocks = new int[10];
