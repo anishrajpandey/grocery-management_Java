@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class GroceryManager {
@@ -36,5 +37,12 @@ public class GroceryManager {
      * Branch: feature-restock
      */
     public static void restockitem(String[] names, int[] stocks, String target, int amount) {
+        for (int i = 0; i < names.length; i++) {
+            if (names[i] != null) {
+                stocks[i] += amount;
+                return;
+            }
+        }
+        System.out.println("Item not found");
     }
 }
