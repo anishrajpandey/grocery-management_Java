@@ -41,13 +41,18 @@ public class GroceryManager {
         sc.close();
     }
 
-    /**
-     * Task 1: Iterates through arrays and prints non-empty inventory slots.
-     * Branch: feature-display
-     */
     public static void printInventory(String[] names, double[] prices, int[] stocks) {
-    }
 
+    for (int i = 0; i < names.length; i++) {
+
+        if (names[i] != null) {
+            System.out.println("Item: " + names[i] +
+                               " | Price: $" + prices[i] +
+                               " | Stock: " + stocks[i]);
+        }
+    }
+}
+    
     /**
      * Task 2: Searches for an item by name and updates its stock quantity.
      * Branch: feature-restock
