@@ -59,7 +59,7 @@ public class GroceryManager {
      */
     public static void restockitem(String[] names, int[] stocks, String target, int amount) {
         for (int i = 0; i < names.length; i++) {
-            if (names[i] != null) {
+            if (names[i] != null && names[i].equals(target)) {
                 stocks[i] += amount;
                 return;
             }
