@@ -30,7 +30,7 @@ public class GroceryManager {
                 String target = sc.nextLine();
                 System.out.print("Enter amount to add: ");
                 int amount = sc.nextInt();
-                restockitem(itemNames, itemStocks, target, amount);
+                restockItem(itemNames, itemStocks, target, amount);
             } else if (choice == 3)
                 break;
             else {
@@ -57,7 +57,7 @@ public class GroceryManager {
      * Task 2: Searches for an item by name and updates its stock quantity.
      * Branch: feature-restock
      */
-    public static void restockitem(String[] names, int[] stocks, String target, int amount) {
+    public static void restockItem(String[] names, int[] stocks, String target, int amount) {
         for (int i = 0; i < names.length; i++) {
             if (names[i] != null && names[i].equals(target)) {
                 stocks[i] += amount;
