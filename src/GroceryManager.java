@@ -61,7 +61,7 @@ public class GroceryManager {
         for (int i = 0; i < names.length; i++) {
             if (names[i] != null && names[i].equals(target)) {
                 stocks[i] += amount;
-                return;
+              
             }
         }
         System.out.println("Item not found");
