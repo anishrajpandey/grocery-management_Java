@@ -7,21 +7,37 @@ public class GroceryManager {
         double[] itemPrices = new double[10];
         int[] itemStocks = new int[10];
 
+        // for testing
+        itemNames[0] = "Milk";
+        itemPrices[0] = 3.50;
+        itemStocks[0] = 5;
+        itemNames[1] = "Bread";
+        itemPrices[1] = 2.00;
+        itemStocks[1] = 10;
+
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("Enter 1 for View, 2 for Restock, 3 to Exit");
+            System.out.print("Enter choice: ");
+
             int choice = sc.nextInt();
+            sc.nextLine();
             if (choice == 1) {
                 printInventory(itemNames, itemPrices, itemStocks);
             } else if (choice == 2) {
-                restockitem(itemNames, itemStocks, null, choice);
-            }
-
-            if (choice == 3)
+                System.out.print("Enter item name to restock: ");
+                String target = sc.nextLine();
+                System.out.print("Enter amount to add: ");
+                int amount = sc.nextInt();
+                restockitem(itemNames, itemStocks, target, amount);
+            } else if (choice == 3)
                 break;
+            else {
+                System.out.println("Invalid choice. Try again.");
+            }
         }
-        System.out.println("exited loop");
-
+        System.out.println("Exited system.");
+        sc.close();
     }
 
     /**
