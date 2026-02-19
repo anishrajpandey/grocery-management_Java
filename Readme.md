@@ -6,7 +6,7 @@ A Java-based inventory management system utilizing parallel arrays to track item
 
 - **Benjamin Chei** - Developer / Collaborator
 - **Elizabeth D. Olvera** - Developer / Collaborator
-- \*\* Anish Raj Pandey- Developer / Collaborator
+-  **Anish Raj Pandey** - Developer / Collaborator
 
 ## Project Architecture
 
