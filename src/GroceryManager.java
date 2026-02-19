@@ -11,6 +11,11 @@ public class GroceryManager {
         while (true) {
             System.out.println("Enter 1 for View, 2 for Restock, 3 to Exit");
             int choice = sc.nextInt();
+            if (choice == 1) {
+                printInventory(itemNames, itemPrices, itemStocks);
+            } else if (choice == 2) {
+                restockitem(itemNames, itemStocks, null, choice);
+            }
 
             if (choice == 3)
                 break;
